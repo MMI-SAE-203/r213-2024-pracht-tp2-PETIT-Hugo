@@ -55,4 +55,7 @@ const maisonListe:MaisonRecord[] = [
 
 <template>
   <h1 class="text-2xl">Bonjour monde !</h1>
+  <MaisonCard v-bind="maisonListe[0]"/>
+  <MaisonCard v-bind="maisonListe[1]"/>
+  <MaisonCard v-bind="maisonListe[2]"/>
 </template>
