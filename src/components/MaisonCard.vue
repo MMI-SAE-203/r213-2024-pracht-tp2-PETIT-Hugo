@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { MaisonRecord } from '@/type';
+import type { MaisonRecord } from '@/pocketbase-types';
 
 defineProps<MaisonRecord>()
 
@@ -24,23 +24,23 @@ defineProps<MaisonRecord>()
       <div class="flex-grow-0 flex-shrink-0 w-[249px] h-[75px]">
         <div class="flex justify-start items-end w-[164.11px] absolute left-0 top-0 gap-0.5">
           <p class="flex-grow-0 flex-shrink-0 text-2xl font-bold text-left text-indigo-500">
-            $2,700
+            {{ prix }}
           </p>
           <p class="flex-grow-0 flex-shrink-0 w-[58px] h-8 text-base text-left text-gray-500">
-            /month
+            €
           </p>
         </div>
         <p
           class="w-[249px] absolute left-0 top-[43px] text-2xl font-semibold text-left text-gray-900"
         >
-          Beverly Springfield
+          {{nomMaison}}
         </p>
       </div>
       <svg
         width="49"
         height="48"
         viewBox="0 0 49 48"
-        fill="none"
+        :fill="favori?'#6366F1':'white'"
         xmlns="http://www.w3.org/2000/svg"
         class="flex-grow-0 flex-shrink-0 w-12 h-12"
         preserveAspectRatio="xMidYMid meet"
@@ -65,7 +65,7 @@ defineProps<MaisonRecord>()
     <p
       class="self-stretch flex-grow-0 flex-shrink-0 w-[354.67px] text-base text-left text-gray-500"
     >
-      2821 Lake Sevilla, Palm Harbor, TX
+      {{adresse}}
     </p>
     <svg
       width="355"
@@ -112,8 +112,8 @@ defineProps<MaisonRecord>()
           ></path>
         </svg>
         <div class="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-1">
-          <p class="flex-grow-0 flex-shrink-0 text-xs text-left text-gray-600">4</p>
-          <p class="flex-grow-0 flex-shrink-0 text-xs text-left text-gray-600">Beds</p>
+          <p class="flex-grow-0 flex-shrink-0 text-xs text-left text-gray-600">{{ nbChambres }}</p>
+          <p class="flex-grow-0 flex-shrink-0 text-xs text-left text-gray-600">Chambres</p>
         </div>
       </div>
       <div class="flex justify-center items-center flex-grow relative gap-2">
@@ -163,8 +163,8 @@ defineProps<MaisonRecord>()
           </defs>
         </svg>
         <div class="flex justify-center items-center flex-grow-0 flex-shrink-0 relative gap-1">
-          <p class="flex-grow-0 flex-shrink-0 text-xs text-left text-gray-600">2</p>
-          <p class="flex-grow-0 flex-shrink-0 text-xs text-left text-gray-600">Bathrooms</p>
+          <p class="flex-grow-0 flex-shrink-0 text-xs text-left text-gray-600">{{ nbSdb }}</p>
+          <p class="flex-grow-0 flex-shrink-0 text-xs text-left text-gray-600">Salles de bain</p>
         </div>
       </div>
       <div class="flex justify-end items-center flex-grow relative gap-2">
@@ -207,7 +207,7 @@ defineProps<MaisonRecord>()
           </defs>
         </svg>
         <div class="flex justify-end items-center flex-grow-0 flex-shrink-0 relative gap-1">
-          <p class="flex-grow-0 flex-shrink-0 text-xs text-left text-gray-600">130</p>
+          <p class="flex-grow-0 flex-shrink-0 text-xs text-left text-gray-600">{{surface}}</p>
           <p class="flex-grow-0 flex-shrink-0 text-xs text-left text-gray-600">m²</p>
         </div>
       </div>
