@@ -8,6 +8,20 @@ const maisonsListe = await allMaisonsSorted()
 
 <template>
 
-  <MaisonCard v-for="uneMaison in maisonsListe" :key="uneMaison.id" v-bind="uneMaison"/>
+  <ul>
+        <li v-for="uneMaison of maisonsListe" v-bind:key="uneMaison.id">
+            <RouterLink
+            :to="{
+                name: '/offres/[id]',
+                params: {
+                id: uneMaison.id
+                }
+            }"
+            class="text-red-400 hover:text-red-600"
+            >
+            {{ uneMaison.nomMaison }}
+            </RouterLink>
+        </li>
+    </ul>
 
 </template>
