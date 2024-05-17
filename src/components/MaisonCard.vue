@@ -12,12 +12,12 @@ console.log (`props : `, {...props})
 >
   <div class="self-stretch flex-grow-0 flex-shrink-0 h-[200px]">
     <div
-      class="w-[394.67px] h-[200px] absolute left-[-0.5px] top-[-0.5px] rounded-tl-lg rounded-tr-lg bg-gray-500"
+      class="w-[394.67px] h-[150px] absolute left-[-0.5px] top-[-0.5px] rounded-tl-lg rounded-tr-lg bg-gray-500"
     ></div>
     <ImgPb
       :record="props"
       :filename="props.image"
-      class="w-[394.67px] h-[235px] absolute left-[-0.5px] top-[-24.5px] object-cover"
+      class="w-[394.67px] h-[200px] absolute left-[-0.5px]  object-cover"
     />
   </div>
   <div
