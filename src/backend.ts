@@ -165,3 +165,11 @@ export async function agentParID(id) {
 }
 
 
+
+
+export async function allagentsSorted() {
+  const records = await pb.collection('agent').getFullList({
+    sort: 'Nom'
+  })
+  return records
+}

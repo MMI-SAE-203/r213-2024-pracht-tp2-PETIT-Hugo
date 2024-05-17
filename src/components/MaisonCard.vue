@@ -17,7 +17,7 @@ console.log (`props : `, {...props})
     <ImgPb
       :record="props"
       :filename="props.image"
-      class="w-[394.67px] h-[200px] absolute left-[-0.5px]  object-cover"
+      class="w-[394.67px] h-[200px] absolute left-[-0.5px]  object-cover rounded-tl-lg rounded-tr-lg"
     />
   </div>
   <div
