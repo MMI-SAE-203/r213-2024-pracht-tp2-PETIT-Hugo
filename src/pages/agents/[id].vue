@@ -13,8 +13,8 @@
 <template>
   <div>
     <h1 class="text-xl">Un agent</h1>
-    Nom {{ agent.Nom }}
-    Prénom {{ agent.Prenom }}
-    Téléphone {{ agent.Telephone }}
+    <p>Nom {{ unAgent.Nom }}</p>
+    <p>Prénom {{ unAgent.Prenom }}</p>
+    <p>Téléphone {{ unAgent.Telephone }}</p>
   </div>
 </template>
