@@ -7,7 +7,7 @@ const maisonsListe = await pb.collection('maison').getFullList(/*{ filter: 'favo
 </script>
 
 <template>
-
-  <MaisonCard v-for="uneMaison in maisonsListe" :key="uneMaison.id" v-bind="uneMaison"/>
-
+<div class="grid grid-cols-3 gap-4">
+    <MaisonCard v-for="uneMaison in maisonsListe" :key="uneMaison.id" v-bind="uneMaison"/>
+  </div>
 </template>
