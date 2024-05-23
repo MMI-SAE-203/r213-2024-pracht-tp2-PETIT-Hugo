@@ -1,7 +1,7 @@
 import PocketBase from 'pocketbase'
 import { type TypedPocketBase } from './pocketbase-types.js'
 
-export const pb = new Pocketbase('http://127.0.0.1:8090')
+export const pb = new PocketBase('https://r213.petit-hugommi1.fr:443')
 
 // Copier ici les fonctions developpées en R214 | Système d'information
 
