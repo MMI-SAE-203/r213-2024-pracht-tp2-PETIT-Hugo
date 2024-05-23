@@ -13,6 +13,9 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
+  },
+  build: {
+    target: 'esnext'
   }
   // // décommenter pour build en mode production directement dans pocketbase
   // ,
